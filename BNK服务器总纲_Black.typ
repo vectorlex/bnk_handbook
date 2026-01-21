@@ -1,9 +1,11 @@
 #set text(font: ("Latin Modern Math", "Noto Serif CJK SC"), size: 13pt)
-#set heading(numbering: "一、I. 1. a. ")
+#set heading(numbering: "一、1. 1. 1. ")
+#set page(fill: rgb("#000000"))
+#set text(fill: rgb("#ffffff"))
 
 #align(center, text(size: 40pt)[*BNK服务器*])
 #align(center)[文档版本:2.0a(rewrited)]
-#line(length: 100%)
+#line(length: 100%, stroke: white)
 #align(center)[#outline(title: "目录")]
 
 = 前要
@@ -47,6 +49,7 @@ BNK崩喵服务器都为你预留了位置~\
 === 常用指令
 
 #table(
+  stroke: white,
   columns: (1fr, 1fr, 1fr),
   [命令], [功能], [备注],
   [/tpa [玩家名]], [传送], [],
@@ -164,7 +167,7 @@ BNK崩喵服务器都为你预留了位置~\
 限量奖励：\
 服务器周边一份(仅3份)
 == 部分插件教程
-==== 称号获取教程
+=== 称号获取教程
 每日签到可获得1枚称号币\
 凑齐5枚可自定义一条称号\
 方法：\
@@ -176,7 +179,7 @@ BNK崩喵服务器都为你预留了位置~\
 + 左边是点卷不用管 中间是称号币购买 (五枚) 右边是金币购买 (350000金币)
 + 点击对应的购买方式即可购买该称号
 + 再次使用"/plt open"打开菜单选择称号
-==== 箱子商店教程
+=== 箱子商店教程
 + 怎么创建出售商店？
   - 首先, 你需要放置一个商店容器 (如箱子) , 在生存模式下, 手持要出售的物品左键点击, 之后就会在聊天栏中要求你输入价格。
   - 例如, 在聊天栏中输入 10, 则会创建一个售价为 10\$ 的商店。
@@ -196,7 +199,8 @@ BNK崩喵服务器都为你预留了位置~\
 + 如果寻找商店？
   - 在聊天框输入"/qs find 你要找的东西(必须英文)" 这样会在你附近的范围内找关于你要找的东西
 = 赞助
-#align(center, image("dashang.png"))
+//#align(center, image("dashang.png"))
+#align(center, text(size: 32pt)[(付款码在群里)])
 #align(center)[感觉服务器好玩的可以打赏两块awa\
   怕服务器没钱嗝屁的可以多打点qwq
 ]
