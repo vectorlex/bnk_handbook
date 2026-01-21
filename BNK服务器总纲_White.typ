@@ -3,10 +3,19 @@
 #set page(fill: rgb("#ffffff"))
 #set text(fill: rgb("#000000"))
 
-#align(center, text(size: 40pt)[*BNK服务器*])
+#align(center, text(size: 40pt)[*BNK服务器总纲*])
 #align(center)[文档版本:2.0a(rewrited)]
 #line(length: 100%, stroke: black)
 #align(center)[#outline(title: "目录")]
+#pagebreak()
+#counter(page).update(1)
+#set page(numbering: "1/1")
+#set page(header: [
+  BNK服务器总纲
+  #h(1fr)
+  the Handbook of the BNK Server\
+  #line(length: 100%, stroke: black)
+])
 
 = 前要
 == 介绍
