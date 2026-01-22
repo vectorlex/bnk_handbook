@@ -1,22 +1,30 @@
 #set text(font: ("Latin Modern Math", "Noto Serif CJK SC"), size: 13pt)
 #set heading(numbering: "一、1. 1. 1. ")
-#set page(fill: rgb("#000000"))
-#set text(fill: rgb("#ffffff"))
-
-#align(center, text(size: 40pt)[*BNK服务器总纲*])
-#align(center)[文档版本:2.0a(rewrited)]
-#line(length: 100%, stroke: white)
-#align(center)[#outline(title: "目录")]
-#pagebreak()
+#set page(fill: white)
+#set text(fill: black)
+//封面页
+#page(footer: [
+  #align(center)[不知道这里该写啥但是不写不好看]
+])[
+  \
+  #align(center, text(size: 48pt)[*BNK服务器总纲*])
+  #align(center)[文档版本:2.0a(rewrited v2)]
+]
+//目录页
+#page()[
+  #align(center, text(size: 32pt)[*目录*])
+  #outline(title: "")
+]
 #counter(page).update(1)
 #set page(numbering: "1/1")
 #set page(header: [
   BNK服务器总纲
   #h(1fr)
   the Handbook of the BNK Server\
-  #line(length: 100%, stroke: white)
+  #line(length: 100%, stroke: black)
 ])
 
+//正文
 = 前要
 == 介绍
 BNK崩喵服务器, 英文全称Boom Neko\
@@ -58,7 +66,7 @@ BNK崩喵服务器都为你预留了位置~\
 === 常用指令
 
 #table(
-  stroke: white,
+  stroke: black,
   columns: (1fr, 1fr, 1fr),
   [命令], [功能], [备注],
   [/tpa [玩家名]], [传送], [],
@@ -209,7 +217,7 @@ BNK崩喵服务器都为你预留了位置~\
   - 在聊天框输入"/qs find 你要找的东西(必须英文)" 这样会在你附近的范围内找关于你要找的东西
 = 赞助
 //#align(center, image("dashang.png"))
-#align(center, text(size: 32pt)[(付款码在群里)])
+#align(center, text(size: 32pt)[*(付款码在群里)*])
 #align(center)[感觉服务器好玩的可以打赏两块awa\
   怕服务器没钱嗝屁的可以多打点qwq
 ]

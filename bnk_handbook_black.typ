@@ -1,20 +1,27 @@
 #set text(font: ("Latin Modern Math", "Noto Serif CJK SC"), size: 13pt)
 #set heading(numbering: "一、1. 1. 1. ")
-#set page(fill: rgb("#ffffff"))
-#set text(fill: rgb("#000000"))
-
-#align(center, text(size: 40pt)[*BNK服务器总纲*])
-#align(center)[文档版本:2.0a(rewrited)]
-#line(length: 100%, stroke: black)
-#align(center)[#outline(title: "目录")]
-#pagebreak()
+#set page(fill: rgb("#000000"))
+#set text(fill: rgb("#ffffff"))
+//封面页
+#page(footer: [
+  #align(center)[不知道这里该写啥但是不写不好看]
+])[
+  \
+  #align(center, text(size: 48pt)[*BNK服务器总纲*])
+  #align(center)[文档版本:2.0a(rewrited v2)]
+]
+//目录页
+#page()[
+  #align(center, text(size: 32pt)[*目录*])
+  #align(center)[#outline(title: "")]
+]
 #counter(page).update(1)
 #set page(numbering: "1/1")
 #set page(header: [
   BNK服务器总纲
   #h(1fr)
   the Handbook of the BNK Server\
-  #line(length: 100%, stroke: black)
+  #line(length: 100%, stroke: white)
 ])
 
 = 前要
@@ -58,7 +65,7 @@ BNK崩喵服务器都为你预留了位置~\
 === 常用指令
 
 #table(
-  stroke: black,
+  stroke: white,
   columns: (1fr, 1fr, 1fr),
   [命令], [功能], [备注],
   [/tpa [玩家名]], [传送], [],
