@@ -1,7 +1,7 @@
 #set text(font: ("Latin Modern Math", "Noto Serif CJK SC"), size: 13pt)
 #set heading(numbering: "一、1. 1. 1. ")
-#set page(fill: rgb("#000000"))
-#set text(fill: rgb("#ffffff"))
+#set page(fill: black)
+#set text(fill: white)
 //封面页
 #page(footer: [
   #align(center)[不知道这里该写啥但是不写不好看]
@@ -24,6 +24,7 @@
   #line(length: 100%, stroke: white)
 ])
 
+//正文
 = 前要
 == 介绍
 BNK崩喵服务器, 英文全称Boom Neko\
