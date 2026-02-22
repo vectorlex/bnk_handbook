@@ -18,14 +18,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
 
-    # 👇 新增：安装所需字体
+      # 安装字体（以精确安装为例）
       - name: Install Fonts
         run: |
+          sudo apt-get update
           sudo apt-get install -y fonts-noto-cjk fonts-lmodern
-          fc-cache -f # 刷新字体缓存
-          
-      - uses: actions/checkout@v4
+          fc-cache -f
+
       - uses: typst-community/setup-typst@v4
 
       - name: Create output directory
@@ -34,18 +35,19 @@ jobs:
       - name: Build PDF
         run: typst compile main.typ github-pages-temp/document.pdf
 
-      # 👇 新增步骤：生成 index.html
-      - name: Generate index.html
+      # 👇 修改后的 index.html，自动跳转 PDF
+      - name: Generate index.html with redirect
         run: |
           cat > github-pages-temp/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
           <head>
-            <meta charset="UTF-8">
-            <title>BNK 服务器总纲</title>
+              <meta charset="UTF-8">
+              <title>Redirecting to PDF...</title>
+              <meta http-equiv="refresh" content="0; url=document.pdf">
           </head>
           <body>
-            <embed src="document.pdf" type="application/pdf"/>
+              <p>If you are not redirected automatically, <a href="document.pdf">click here</a>.</p>
           </body>
           </html>
           EOF
