@@ -1,0 +1,47 @@
+name: Publish PDF to GitHub Pages
+on:
+  push:
+    branches: [ "main" ]
+
+# 设置 Pages 所需的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 确保只有一个部署任务在运行
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v4
+
+      # 创建一个临时目录存放生成的 PDF
+      - name: Create output directory
+        run: mkdir -p github-pages-temp
+
+      # 编译 PDF 到临时目录
+      - name: Build PDF
+        run: typst compile main.typ github-pages-temp/document.pdf
+
+      # 上传整个目录作为 Pages 的构建产物
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: github-pages-temp
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
