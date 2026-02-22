@@ -35,13 +35,10 @@ jobs:
           <html>
           <head>
             <meta charset="UTF-8">
-            <title>我的 Typst 文档</title>
+            <title>BNK 服务器总纲</title>
           </head>
           <body>
-            <h1>编译好的 PDF 文档</h1>
-            <p><a href="document.pdf" target="_blank">点击查看 document.pdf</a></p>
-            <p>或者直接嵌入 PDF（需要浏览器支持）：</p>
-            <embed src="document.pdf" type="application/pdf" width="100%" height="600px" />
+            <embed src="document.pdf" type="application/pdf"/>
           </body>
           </html>
           EOF
