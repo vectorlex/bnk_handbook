@@ -29,7 +29,7 @@ jobs:
         run: mkdir -p github-pages-temp
 
       - name: Build PDF
-        run: typst compile main.typ github-pages-temp/document.pdf
+        run: typst compile main.typ github-pages-temp/BNK服务器总纲.pdf
 
       - name: Generate index.html with redirect
         run: |
@@ -38,11 +38,11 @@ jobs:
           <html>
           <head>
               <meta charset="UTF-8">
-              <title>Redirecting to PDF...</title>
+              <title>下载...</title>
               <meta http-equiv="refresh" content="0; url=document.pdf">
           </head>
           <body>
-              <p>If you are not redirected automatically, <a href="document.pdf">click here</a>.</p>
+              <p>如果没有自动下载, <a href="BNK服务器总纲.pdf">点击此处</a>.</p>
           </body>
           </html>
           EOF
