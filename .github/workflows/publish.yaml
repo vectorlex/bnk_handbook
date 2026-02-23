@@ -39,7 +39,7 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <title>下载...</title>
-              <meta http-equiv="refresh" content="0; url=document.pdf">
+              <meta http-equiv="refresh" content="0; url=BNK服务器总纲.pdf">
           </head>
           <body>
               <p>如果没有自动下载, <a href="BNK服务器总纲.pdf">点击此处</a>.</p>
