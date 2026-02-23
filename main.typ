@@ -1,20 +1,26 @@
+//样式
 #set text(font: ("Latin Modern Math", "Noto Serif CJK SC"), size: 13pt)
 #set heading(numbering: "一、1. 1. 1. ")
 #set page(fill: white)
 #set text(fill: black)
+
 //封面页
 #page(footer: [
   #align(center)[不知道这里该写啥但是不写不好看]
 ])[
   \
   #align(center, text(size: 48pt)[*BNK服务器总纲*])
-  #align(center)[文档版本:2.0(rewrited v3.14)]
+  #align(center)[文档版本:2.0(rewrited v3.141)]
 ]
+
 //目录页
 #page()[
   #align(center, text(size: 32pt)[*目录*])
+  #line(length: 100%, stroke: black)
   #outline(title: "")
 ]
+
+//正文
 #counter(page).update(1)
 #set page(numbering: "1/1")
 #set page(header: [
@@ -24,7 +30,6 @@
   #line(length: 100%, stroke: black)
 ])
 
-//正文
 = 介绍
 BNK崩喵服务器, 英文全称Boom Neko\
 一个新生的Java版生存服务器\
