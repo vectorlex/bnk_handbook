@@ -8,7 +8,7 @@
 ])[
   \
   #align(center, text(size: 48pt)[*BNK服务器总纲*])
-  #align(center)[文档版本:2.0(rewrited v3.1)]
+  #align(center)[文档版本:2.0(rewrited v3.14)]
 ]
 //目录页
 #page()[
