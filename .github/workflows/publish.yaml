@@ -31,7 +31,6 @@ jobs:
       - name: Build PDF
         run: typst compile main.typ github-pages-temp/document.pdf
 
-      # 👇 修改后的 index.html，自动跳转 PDF
       - name: Generate index.html with redirect
         run: |
           cat > github-pages-temp/index.html << 'EOF'
