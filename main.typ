@@ -10,6 +10,7 @@
 ])[
   \
   #align(center, text(size: 48pt)[*BNK服务器总纲*])
+  #align(center, text(size: 24pt)[*注:服务器已趋势*])
   #align(center)[文档版本:2.0(rewrited v3.141)]
 ]
 
